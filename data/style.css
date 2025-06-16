@@ -1,0 +1,94 @@
+:root {
+  --primary-light: #8DC26F;
+  --primary-dark:  #76b852;
+  --bg-light:     #f0f0f0;
+  --text-color:   #333;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+  color: var(--text-color);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#controls {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+label span {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+input:focus, select:focus {
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 3px rgba(118,184,82,0.2);
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+button {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+#status {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}

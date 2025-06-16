@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Feeder</title>
+
+  <!-- Stilul paginii -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="controls">
+    <h1>Fish Feeder Control</h1>
+
+    <label>
+      <span>Nume program:</span>
+      <input type="text" id="progName" placeholder="Ex: Morning Routine">
+    </label>
+
+    <label>
+      <span>Ora start:</span>
+      <input type="time" id="startTime" value="08:00">
+    </label>
+
+    <label>
+      <span>Interval (min):</span>
+      <input type="number" id="interval" min="1" value="60">
+    </label>
+
+    <label>
+      <span>Număr mișcări servo:</span>
+      <input type="number" id="count" min="1" value="1">
+    </label>
+
+    <label>
+      <span>Număr pești:</span>
+      <input type="number" id="fishCount" min="1" value="1">
+    </label>
+
+    <label>
+      <span>Vârsta peștilor (ani):</span>
+      <input type="number" id="fishAge" min="0" step="0.1" value="1">
+    </label>
+
+    <label>
+      <span>Preset speciile de pești:</span>
+      <select id="fishPreset">
+        <option value="">--Selectează specie--</option>
+        <option value="Guppy"    data-moves="1">Guppy (2 g, 1 mișcare)</option>
+        <option value="Tetra"    data-moves="1">Tetra (2 g, 1 mișcare)</option>
+        <option value="Betta"    data-moves="2">Betta (4 g, 2 mișcări)</option>
+        <option value="Angelfish" data-moves="3">Angelfish (6 g, 3 mișcări)</option>
+        <option value="Goldfish" data-moves="4">Goldfish (8 g, 4 mișcări)</option>
+      </select>
+    </label>
+
+    <div class="buttons">
+      <button id="addProgram">Salvează Program</button>
+      <button id="setSchedule">Pornește Imediat</button>
+      <button id="stopProgram">Oprește Program</button>
+      <button id="feedButton">Hrănește Acum</button>
+    </div>
+
+    <label>
+      <span>Programe salvate:</span>
+      <select id="programList"><option value="">--Selectează--</option></select>
+    </label>
+    <div class="buttons">
+      <button id="loadProgram">Încarcă</button>
+      <button id="deleteProgram">Șterge</button>
+    </div>
+
+    <p id="status">Niciun program activ</p>
+  </div>
+
+  <!-- Logica JavaScript -->
+  <script src="script.js"defer></script>
+</body>
+</html>
